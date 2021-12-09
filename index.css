@@ -1,0 +1,681 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+}
+
+.header {
+  background-color: black;
+  width: 100%;
+  z-index: 3;
+  height: 80px;
+}
+
+.logo{
+  font-size:30px;
+  font-style: bold;
+  float: left;
+  color: white;
+  margin-left: 50px;
+  margin-top: 20px;
+  font-family: "Brush Script MT", cursive;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+header li {
+  display: inline-block;
+  float: left;
+}
+
+.listitem{
+  display: flex;
+  float: right;
+}
+
+header li a {
+  display: block;
+  color: white;
+  margin-right: 60px;
+  text-decoration: none;
+}
+
+.logo{
+  width: 120px;
+}
+
+.menu li:hover a {
+  transform: translatex(25%);
+  color: red;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 300px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+  
+  section{
+      margin: 0;
+      padding: 0;
+      padding-top: 100px;
+      height: 600px;
+      width: 100%;
+      background: url(https://www.teahub.io/photos/full/129-1294706_working-on-desk.png);
+      opacity: 0.7;
+      background-size: cover;
+      animation: background-image 1s 1 linear;
+
+  }
+
+  section div{
+      width: 100%;
+      height: 100%;
+  }
+
+  section .img1{
+        float: right;
+        margin-right: 150px;
+      width: 300px;
+      height: 400px;
+      border-radius: 70%;
+      opacity: 20;
+      transition: 0.4s;
+  }
+
+  section p{
+    width: 50vw;
+    align-items: center;
+    color: black;
+    margin-top: 50px;
+    margin-left: 200px;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center
+  }
+  section p span{
+    transition: .4s linear
+  }
+  section p:hover span:nth-child(1){
+    margin-right: 5px
+  }
+  section p:hover span:nth-child(1):after{
+    content: "'";
+  }
+  section p:hover span:nth-child(2){
+    margin-left: 30px
+  }
+  section p:hover span{
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff, 
+                 0 0 40px #fff;
+  }
+
+  .center button{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    text-align: center;
+    border: 2px solid white;
+    color: white;
+    background-color: #BCC6CC;
+    border-radius:10px;
+    weight: bold;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    margin-left: 500px;
+    margin-top: 20px;
+    cursor: pointer;
+    animation: form 2s infinite linear alternate;
+    transition: box-shadow 0.2s ease-in;
+  }
+
+  .center button:hover{
+    box-shadow: 4px 6px rgba(0, 0, 0, 0.7);
+    border: 2px solid red;
+    color: red;
+  }
+
+  @keyframes form {
+    from{
+      transform: translateX(-20px);
+    }
+    to{
+      transform: translateX(20px);
+    }
+  }
+
+  .center button:focus{
+    background: white !important;
+    color: black !important;
+  }
+
+  footer{
+    background-color: #bcbcbc;
+    padding: 50px;
+  }
+  footer input{
+    border: 2px solid white;
+    border-radius: 25px;
+    align-items: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 15px 10px;
+    width: 30vw;
+    font-size: 15px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    margin-bottom: 10px;
+    transition: box-shadow 0.5 ease-out;
+  }
+
+  footer button{
+    border: 2px solid white;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 10vw;
+    padding: 10px 15px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    background: transparent;
+  }
+
+  .form{
+    animation: form 2s infinite linear alternate;
+  }
+
+  @keyframes form {
+    from{
+      transform: translateX(-20px);
+    }
+    to{
+      transform: translateX(20px);
+    }
+  }
+
+  footer input:focus{
+    border: 2px solid red;
+    box-shadow: 6px 8px rgba(255,255,255,0.6);
+  }
+
+  footer button:hover{
+    background-color: white;
+    color: crimson;
+  }
+
+  table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 15px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid white;
+  }
+  
+  td, th {
+    text-align: left;
+    padding: 20px;
+  }
+
+  footer h3{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 100px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.link{
+  display: block;
+  text-align: center;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+a img{
+  width: 40px;
+  height: 40px;
+  margin-top: 50px;
+  margin-left: 50px;
+  border-radius: 50%;
+}
+
+
+
+/* ///////media queries/////// */
+@media (min-width: 1024px){
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    /* float: right; */
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+
+  section div{
+    width: 100%;
+    height: 100%;
+}
+
+section .img1{
+      float: right;
+      margin-right: 150px;
+    width: 200px;
+    height: 270px;
+    border-radius: 70%;
+    opacity: 20;
+    transition: 0.4s;
+}
+
+section p{
+  width: 50vw;
+  align-items: center;
+  color: black;
+  margin-top: 50px;
+  margin-left: 200px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center
+}
+
+.center button{
+  margin-left: 300px;
+}
+}
+
+@media (max-width: 768px) and (min-width: 425px) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    /* float: right; */
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+
+  header{
+    width: 100%;
+  }
+
+  section{
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+    height: 600px;
+    width: 100%;
+}
+
+section div{
+  width: 100%;
+  height: 100%;
+}
+
+section .img1{
+    float: right;
+    margin-right: 150px;
+  width: 150px;
+  height: 200px;
+  border-radius: 70%;
+  opacity: 20;
+  transition: 0.4s;
+}
+
+section p{
+width: 50vw;
+align-items: center;
+color: black;
+margin-top: 50px;
+margin-left: 200px;
+font-size: 20px;
+font-weight: bold;
+font-family: monospace;
+text-align: center;
+}
+
+.center button{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+  text-align: center;
+  border: 2px solid white;
+  color: white;
+  background-color: #BCC6CC;
+  border-radius:10px;
+  weight: bold;
+  width: 120px;
+  height: 40px;
+  padding: 10px;
+  margin-left: 300px;
+  cursor: pointer;
+  animation: form 2s infinite linear alternate;
+  transition: box-shadow 0.2s ease-in;
+}
+
+footer{
+  margin: 0;
+  padding: 0;
+}
+
+footer input{
+  border: 2px solid white;
+  border-radius: 25px;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px 10px;
+  width: 35vw;
+  font-size: 15px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  transition: box-shadow 0.5 ease-out;
+}
+
+footer button{
+  border: 2px solid white;
+  display: flex;
+  width: 140px;
+  height: 35px;
+  padding: 10px 15px 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  color: white;
+  background: transparent;
+}
+
+.form{
+  animation: form 2s infinite linear alternate;
+  display: flex;
+  flex-direction: column;
+}
+
+/* @keyframes form {
+  from{
+    transform: translateX(-20px);
+  }
+  to{
+    transform: translateX(20px);
+  }
+} */
+
+footer input:focus{
+  border: 2px solid red;
+  box-shadow: 6px 8px rgba(255,255,255,0.6);
+}
+
+footer button:hover{
+  background-color: white;
+  color: crimson;
+}
+}
+
+@media (max-width: 424px) and (min-width: 320px) {
+  *{
+    padding: 0;
+    margin: 0;
+  }
+
+  header .listitem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(50, 115, 220, 0.3);
+    color: purple;
+    padding-right: 50%;
+    padding-left: 50%;
+  }
+
+  header li a{
+    margin-top: 40px;
+    border-bottom: 1px solid black;
+    color: purple;
+    width: 100%;
+  }
+
+  .logo{
+    text-align: center;
+  }
+
+  section{
+    margin: 0;
+    padding: 0;
+    height: 400px;
+    width: 100%;
+    background: url(https://www.teahub.io/photos/full/129-1294706_working-on-desk.png);
+    opacity: 0.7;
+    background-size: cover;
+    animation: background-image 1s 1 linear;
+
+}
+
+section p{
+  width: 280px;
+  align-items: center;
+  color: black;
+  margin-top: 0;
+  margin-left: 20px;
+  padding-top: 120px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center
+}
+
+  section .img1{
+    display: flex;
+    text-align: center;
+    /* margin-right: 150px; */
+  width: 100px;
+  height: 120px;
+  border-radius: 70%;
+  margin-top: 20px;
+  opacity: 20;
+  transition: 0.4s;
+}
+
+.center button{
+  display: block;
+  align-items: center;
+  font-size: 15px;
+  text-align: center;
+  border: 2px solid white;
+  color: white;
+  background-color: #BCC6CC;
+  border-radius:10px;
+  weight: bold;
+  width: 80px;
+  height: 40px;
+  padding: 10px;
+  margin-top: 15px;
+  margin-left: 80px;
+  cursor: pointer;
+  animation: form 2s infinite linear alternate;
+  transition: box-shadow 0.2s ease-in;
+}
+
+/* @keyframes form {
+  from{
+    transform: translateX(50px);
+  }
+  to{
+    transform: translateX(70px);
+  }
+} */
+
+footer{
+  width: 100%;
+  height: 100%;
+  background-color: #bcbcbc;
+}
+
+.form{
+  animation: form 2s infinite linear alternate;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+footer input{
+  border: 2px solid white;
+  border-radius: 25px;
+  align-items: center;
+  display: flex;
+  padding: 10px 15px 10px;
+  width: 200px;
+  font-size: 15px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  transition: box-shadow 0.5 ease-out;
+}
+
+footer button{
+  border: 2px solid white;
+  display: flex;
+  width: 80px;
+  padding: 5px 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 10px;
+  color: white;
+  background: transparent;
+}
+
+table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 10px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid white;
+}
+
+footer img {
+  width: 30px;
+  height: 30px;
+}
+}
+
+
+

@@ -1,0 +1,608 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+}
+
+.header {
+  background-color: black;
+  width: 100%;
+  z-index: 3;
+  height: 80px;
+}
+
+.logo{
+  font-size:30px;
+  font-style: bold;
+  float: left;
+  color: white;
+  margin-left: 50px;
+  margin-top: 20px;
+  font-family: "Brush Script MT", cursive;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+header li {
+  display: inline-block;
+  float: left;
+}
+
+.listitem{
+  display: flex;
+  float: right;
+}
+
+header li a {
+  display: block;
+  color: white;
+  margin-right: 60px;
+  text-decoration: none;
+}
+
+.logo{
+  width: 120px;
+}
+
+.menu li:hover a {
+  transform: translatex(25%);
+  color: red;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 300px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+section{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  display: flex;
+}
+
+.about{
+  text-align: center;
+  width: 1000px;
+  margin-top: 100px;
+}
+
+.about h1{
+  font-size: 40px;
+}
+
+.about p{
+  font-size: 20px;
+}
+
+.sec2{
+  display: flex;
+  background-color: #bcbcbc;
+  margin-top: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.sec2 h2{
+  text-align: center;
+  width: 400px;
+  font-size: 40px;
+  padding-left: 100px;
+  margin-top: 50px;
+}
+
+.sec2 div{
+  text-align: center;
+  margin-right: 30px;
+  width: 700px;
+  margin-left: 200px;
+  margin-top: 70px;
+}
+
+.sec2 div h3{
+  font-size: 30px;
+}
+
+.sec2 div p{
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.sec2 div a{
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.sec2 div a:hover{
+  color: aqua;
+}
+
+.sec3{
+  background-color:black;
+  background-size: cover;
+}
+
+.portfolio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding-top: 100px;
+  font-weight: bold;
+}
+
+.portfolio div{
+  font-size: 40px;
+  margin: 30px;
+}
+
+.portfolio h1{
+  font-size: 40px;
+  margin: 30px;
+  width: 500px;
+  text-align: center;
+}
+
+.portfolio h3{
+  font-size: 30px;
+  margin: 30px;
+  cursor: pointer;
+}
+
+.display1{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+/* .display11 hover:img{
+    transform: rotate(90) scale(1.5);
+}
+
+.display12 hover:img{
+  transform: rotate(0) scale(1);
+} */
+
+.display1 img{
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  border-radius: 7px;
+}
+
+.display1 img:hover {
+  opacity: 0.5;
+  transform: scale(1.2);
+}
+
+@keyframes rotate {
+  from{
+  transform: rotate(0) scale(1);
+  }
+  to{
+    transform: rotate(90) scale(1.5);
+  }
+}
+
+.button button{
+  width: 150px;
+  height: 70px;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  font-size: 18px;
+  margin: 70px;
+}
+
+.button button:hover{
+  color: aqua;
+  border: 2px solid aqua;
+}
+
+section .sign{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.sign p{
+  font-size: 20px;
+  text-align: center;
+  width: 500px;
+}
+
+.sign h1{
+  font-family: cursive;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+section .footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.footer h1{
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer img{
+  border-radius: 50%;
+}
+
+
+
+
+
+
+/* //////////MEDIA QUERIES/////////// */
+
+@media (min-width: 1024px){
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    /* float: right; */
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+
+  header{
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 425px) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    /* float: right; */
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+
+  header{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .listitem a{
+    margin: 20px;
+  }
+
+  .sec{
+    padding: 0;
+    margin: 0;
+  }
+
+  .sec img{
+    width: 400px;
+    height: 400px;
+  }
+
+  .sec2{
+    padding: 0;
+    margin: 0;
+  }
+
+  .sec2 h2{
+    text-align: center;
+    width: 200px;
+    font-size: 25px;
+    padding-left: 50px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .sec2 div{
+    text-align: center;
+    margin-right: 30px;
+    width: 500px;
+    margin-left: 120px;
+    margin-top: 50px;
+  }
+  
+  .sec2 div h3{
+    font-size: 20px;
+  }
+  
+  .sec2 div p{
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .sec3{
+    margin: 0;
+    padding: 0;
+  }
+
+  .portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-top: 60px;
+    font-weight: bold;
+  }
+  
+  .portfolio div{
+    font-size: 30px;
+    margin: 20px;
+  }
+  
+  .portfolio h1{
+    font-size: 20px;
+    margin: 20px;
+    width: 350px;
+    text-align: center;
+  }
+  
+  .portfolio h3{
+    font-size: 20px;
+    margin: 20px;
+    cursor: pointer;
+  }
+
+  .display1 img{
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+    border-radius: 7px;
+  }
+
+  .button button{
+    width: 100px;
+    height: 45px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    font-size: 13px;
+    margin: 70px;
+  }
+
+  .footer img {
+    border-radius: 50%;
+  }
+
+}
+
+@media (max-width: 424px) and (min-width: 320px) {
+  *{
+    padding: 0;
+    margin: 0;
+  }
+
+  header .listitem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(50, 115, 220, 0.3);
+    color: purple;
+    padding-right: 50%;
+    padding-left: 50%;
+  }
+
+  header li a{
+    margin-top: 40px;
+    border-bottom: 1px solid black;
+    color: purple;
+    width: 100%;
+  }
+
+  .logo{
+    text-align: center;
+  }
+
+  .header{
+    margin: 0;
+    padding: 0;
+    width: 710px;
+  }
+
+  .sec{
+    padding: 0;
+    margin: 0;
+    width: 710px;
+  }
+
+  .sec img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .container {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 710px;
+  }
+
+  .container p{
+    width: 400px;
+  }
+  .sec2{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 710px;
+  }
+
+  .sec2 h2{
+    font-size: 30px;
+    margin-left: 10px;
+    padding-left: 0;
+  }
+
+  .sec2 div h3{
+    font-size: 25px;
+  }
+
+  .sec2 div{
+    width: 100%;
+    margin-left: 15px;
+    margin-bottom: 20px;
+  }
+
+  .sec3{
+    padding: 0;
+    margin: 0;
+    width: 710px;
+  }
+
+  .portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-top: 30px;
+    font-weight: bold;
+  }
+  
+  .portfolio div{
+    font-size: 30px;
+    margin: 10px;
+  }
+  
+  .portfolio h1{
+    font-size: 25px;
+    margin: 20px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .portfolio h3{
+    font-size: 25px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .display11 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .display12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
