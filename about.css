@@ -32,6 +32,10 @@ header ul {
   overflow: hidden;
 }
 
+header ul:hover {
+  opacity: 99999;
+}
+
 header li {
   display: inline-block;
   float: left;
